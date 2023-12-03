@@ -1,8 +1,9 @@
 *{
     box-sizing:border-box;
     margin: 0;
-    padding: 0;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;      
 }
+
 
 main {
     display: flex;
@@ -15,38 +16,103 @@ main {
 .content {
     flex: 2;
     /* Адведзем другую палову экрана для .main */
-    padding: 20px;
+    padding: 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 img {
-   /* Аграничваем шырину выявы да 1/3 экрана */
+   
     height: 100vh; /* Аўтаматычна падстаўляем вышыню для адпаведнасці аспектнаму адносіну */
     object-fit: cover;
     margin: 0;
     padding: 0;
+    
   
 }
 
 /* Стылі для формы */
 form {
     max-width: 800px; /* Установите желаемую максимальную ширину формы */
-    margin: auto;
+    /* margin: auto; */
+    margin-bottom: 2em;
 }
 
 form table {
     width: 100%; /* Занимает всю ширину формы */
-    border-collapse: collapse; /* Объединение границ ячеек */
+   /* Объединение границ ячеек */
 }
 
-form td {
-    padding: 10px; /* Добавляет отступ в ячейках таблицы */
+ form td {
+    padding: 1em; 
+    
+}
+ 
+/*Добавляет отступ в ячейках таблицы*/
+
+.text{
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
 }
 
-form label {
-    display: block; /* Размещает метку на отдельной строке */
-    margin-bottom: 5px; /* Добавляет отступ между метками */
+.footer{
+    font-size: 1.5em;
 }
 
+button{
+    background-color: #71db34; /* Цвет фона кнопки */
+    color: #ffffff; /* Цвет текста кнопки */
+    border: none; /* Убрать границу кнопки */
+    padding: 10px 20px; /* Задать отступы внутри кнопки */
+    cursor: pointer; /* Добавить указатель при наведении на кнопку */
+    border-radius: 5px; /* Задать скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавить тень */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+
+button:hover {
+    background-color: #71db34c4; /* Цвет фона при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
+
+
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #71db34; /* Изменяем цвет обводки при фокусе */
+}
+
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+input:focus + label,    
+input:valid + label {
+    transform: translateY(-210%) translatex(-20%) scale(0.8);
+    color: #71db34;
+}
