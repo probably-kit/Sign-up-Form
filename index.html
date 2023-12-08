@@ -13,8 +13,9 @@
 
 <body>
     <main>
-        <div>
-            <img src="img/moss-stones.jpg" alt="moss-stones green nature">
+        <div class="img-container">
+            <img class="img-body" src="img/moss-stones.jpg" alt="moss-stones green nature">
+            <div class="img-text">aboba</div>
         </div>
         <div class="content">
             <div class="text">
@@ -24,7 +25,7 @@
                     You know you want to.
                 </p>
             </div>
-            <form action="#" method="post">
+            <form action="#" method="post" id="form">
                 <table>
                     <tr>
                         <td>
@@ -58,7 +59,8 @@
                         <td>
                             <div class="form-group">
                                 <input type="password" id="password" name="password" required>
-                                <label for="password">PASSWORD</label>
+                                <label for="password" id="password-label">PASSWORD</label>
+                                <p id="error-message"></p>
                             </div>
                         </td>
                         <td>
@@ -70,7 +72,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button>Create Account</button>
+                            <button id="submit_button">Create Account</button>
                         </td>
                     </tr>
                 </table>

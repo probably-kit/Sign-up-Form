@@ -1,7 +1,7 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;      
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 
@@ -22,36 +22,58 @@ main {
     justify-content: center;
 }
 
-img {
-   
-    height: 100vh; /* Аўтаматычна падстаўляем вышыню для адпаведнасці аспектнаму адносіну */
-    object-fit: cover;
+.img-container {
+    height: 100vh;
+    
     margin: 0;
     padding: 0;
-    
-  
 }
+    
+.img-body {
+    height: 100vh;   
+    width: 80vh;
+    z-index: -1;
+ 
+}
+
+.img-text {
+    position: absolute;
+    background: black;
+    opacity: 0.6;
+    color: white;
+    top: 16rem;
+    text-align: center;
+    font-size: 2.2em;
+    width: 80vh;
+
+}
+
+
+
+
 
 /* Стылі для формы */
 form {
-    max-width: 800px; /* Установите желаемую максимальную ширину формы */
+    max-width: 800px;
+    /* Установите желаемую максимальную ширину формы */
     /* margin: auto; */
     margin-bottom: 2em;
 }
 
 form table {
-    width: 100%; /* Занимает всю ширину формы */
-   /* Объединение границ ячеек */
+    width: 100%;
+    /* Занимает всю ширину формы */
+    /* Объединение границ ячеек */
 }
 
- form td {
-    padding: 1em; 
-    
+form td {
+    padding: 1em;
+
 }
- 
+
 /*Добавляет отступ в ячейках таблицы*/
 
-.text{
+.text {
     font-size: 2em;
     display: flex;
     justify-content: center;
@@ -59,25 +81,35 @@ form table {
     margin-bottom: 1em;
 }
 
-.footer{
+.footer {
     font-size: 1.5em;
 }
 
-button{
-    background-color: #71db34; /* Цвет фона кнопки */
-    color: #ffffff; /* Цвет текста кнопки */
-    border: none; /* Убрать границу кнопки */
-    padding: 10px 20px; /* Задать отступы внутри кнопки */
-    cursor: pointer; /* Добавить указатель при наведении на кнопку */
-    border-radius: 5px; /* Задать скругленные углы */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавить тень */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Плавное изменение цвета при наведении */
+button {
+    background-color: #71db34;
+    /* Цвет фона кнопки */
+    color: #ffffff;
+    /* Цвет текста кнопки */
+    border: none;
+    /* Убрать границу кнопки */
+    padding: 10px 20px;
+    /* Задать отступы внутри кнопки */
+    cursor: pointer;
+    /* Добавить указатель при наведении на кнопку */
+    border-radius: 5px;
+    /* Задать скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Добавить тень */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Плавное изменение цвета при наведении */
 }
 
 
 button:hover {
-    background-color: #71db34c4; /* Цвет фона при наведении */
-    color: #ffffff; /* Цвет текста при наведении */
+    background-color: #71db34c4;
+    /* Цвет фона при наведении */
+    color: #ffffff;
+    /* Цвет текста при наведении */
 }
 
 
@@ -97,7 +129,8 @@ input {
 }
 
 input:focus {
-    border-color: #71db34; /* Изменяем цвет обводки при фокусе */
+    border-color: #71db34;
+    /* Изменяем цвет обводки при фокусе */
 }
 
 
@@ -111,8 +144,19 @@ label {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-input:focus + label,    
-input:valid + label {
+#error-message {
+    color: #db4734;
+
+}
+
+input:focus+label,
+input:valid+label {
     transform: translateY(-210%) translatex(-20%) scale(0.8);
     color: #71db34;
+}
+
+
+input:invalid+label {
+    transform: translateY(-210%) translatex(-20%) scale(0.8);
+    color: #db4734;
 }
