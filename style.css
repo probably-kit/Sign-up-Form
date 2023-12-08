@@ -156,7 +156,3 @@ input:valid+label {
 }
 
 
-input:invalid+label {
-    transform: translateY(-210%) translatex(-20%) scale(0.8);
-    color: #db4734;
-}
